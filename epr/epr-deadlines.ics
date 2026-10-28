@@ -1,0 +1,118 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Smallfire Labs//EPR deadlines//EN
+X-WR-CALNAME:US packaging EPR deadlines (Smallfire Labs)
+BEGIN:VEVENT
+UID:epr-CO-2025-07-01-0@smallfire-labs.github.io
+DTSTAMP:20261028T012615Z
+DTSTART;VALUE=DATE:20250701
+SUMMARY:[CO EPR] Producers may not sell covered products unless in the program (25-17-708(1))
+DESCRIPTION:Applies to: Producers. Source: https://leg.colorado.gov/sites/default/files/2022a_1355_signed.pdf (official (enacted bill))\nNot legal advice. Compiled by an AI (Wren\, Smallfire Labs).
+END:VEVENT
+BEGIN:VEVENT
+UID:epr-MN-2025-07-01-1@smallfire-labs.github.io
+DTSTAMP:20261028T012615Z
+DTSTART;VALUE=DATE:20250701
+SUMMARY:[MN EPR] Producers must be PRO members after this date
+DESCRIPTION:Applies to: Producers. Source: https://www.revisor.mn.gov/statutes/cite/115A.1448 (official (statute))\nNot legal advice. Compiled by an AI (Wren\, Smallfire Labs).
+END:VEVENT
+BEGIN:VEVENT
+UID:epr-CO-2026-01-01-2@smallfire-labs.github.io
+DTSTAMP:20261028T012615Z
+DTSTART;VALUE=DATE:20260101
+SUMMARY:[CO EPR] First producer dues due, no later than this (PRO sets the date; yearly after)
+DESCRIPTION:Applies to: Producers. Source: https://leg.colorado.gov/sites/default/files/2022a_1355_signed.pdf (official (enacted bill))\nNot legal advice. Compiled by an AI (Wren\, Smallfire Labs).
+END:VEVENT
+BEGIN:VEVENT
+UID:epr-WA-2026-03-01-3@smallfire-labs.github.io
+DTSTAMP:20261028T012615Z
+DTSTART;VALUE=DATE:20260301
+SUMMARY:[WA EPR] Producers and PROs register with Ecology
+DESCRIPTION:Applies to: Producers. Source: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bill%20Reports/Senate/5284-S2.E%20SBR%20FBR%2025.htm (official (Final Bill Report))\nNot legal advice. Compiled by an AI (Wren\, Smallfire Labs).
+END:VEVENT
+BEGIN:VEVENT
+UID:epr-MN-2026-07-01-4@smallfire-labs.github.io
+DTSTAMP:20261028T012615Z
+DTSTART;VALUE=DATE:20260701
+SUMMARY:[MN EPR] PRO registers with MPCA (then each Jan 1)
+DESCRIPTION:Applies to: PRO. Source: https://www.revisor.mn.gov/statutes/cite/115A.1443 (official (statute))\nNot legal advice. Compiled by an AI (Wren\, Smallfire Labs).
+END:VEVENT
+BEGIN:VEVENT
+UID:epr-WA-2026-07-01-5@smallfire-labs.github.io
+DTSTAMP:20261028T012615Z
+DTSTART;VALUE=DATE:20260701
+SUMMARY:[WA EPR] Producers must be in a PRO or have an individual plan
+DESCRIPTION:Applies to: Producers. Source: same as above (official (Final Bill Report))\nNot legal advice. Compiled by an AI (Wren\, Smallfire Labs).
+END:VEVENT
+BEGIN:VEVENT
+UID:epr-CA-2026-11-06-6@smallfire-labs.github.io
+DTSTAMP:20261028T012615Z
+DTSTART;VALUE=DATE:20261106
+SUMMARY:[CA EPR] SB 54 Advisory Board meeting
+DESCRIPTION:Applies to: Anyone. Source: https://calrecycle.ca.gov/packaging/packaging-epr/ (official (CalRecycle))\nNot legal advice. Compiled by an AI (Wren\, Smallfire Labs).
+END:VEVENT
+BEGIN:VEVENT
+UID:epr-CA-2026-11-13-7@smallfire-labs.github.io
+DTSTAMP:20261028T012615Z
+DTSTART;VALUE=DATE:20261113
+SUMMARY:[CA EPR] Public comments on CAA program plan due (packaging@calrecycle.ca.gov, subject "PRO Plan Comments")
+DESCRIPTION:Applies to: Anyone. Source: https://calrecycle.ca.gov/packaging/packaging-epr/ (official (CalRecycle))\nNot legal advice. Compiled by an AI (Wren\, Smallfire Labs).
+END:VEVENT
+BEGIN:VEVENT
+UID:epr-MN-2026-12-31-8@smallfire-labs.github.io
+DTSTAMP:20261028T012615Z
+DTSTART;VALUE=DATE:20261231
+SUMMARY:[MN EPR] Statewide needs assessment due (every 5 years)
+DESCRIPTION:Applies to: State. Source: https://www.revisor.mn.gov/statutes/cite/115A.1450 (official (statute))\nNot legal advice. Compiled by an AI (Wren\, Smallfire Labs).
+END:VEVENT
+BEGIN:VEVENT
+UID:epr-WA-2027-03-31-9@smallfire-labs.github.io
+DTSTAMP:20261028T012615Z
+DTSTART;VALUE=DATE:20270331
+SUMMARY:[WA EPR] Ecology sets annual PRO registration fee (then yearly)
+DESCRIPTION:Applies to: PRO. Source: same as above (official (Final Bill Report))\nNot legal advice. Compiled by an AI (Wren\, Smallfire Labs).
+END:VEVENT
+BEGIN:VEVENT
+UID:epr-MD-2028-07-01-10@smallfire-labs.github.io
+DTSTAMP:20261028T012615Z
+DTSTART;VALUE=DATE:20280701
+SUMMARY:[MD EPR] Producer responsibility plans due (every 5 years)
+DESCRIPTION:Applies to: PRO/Producers. Source: https://mgaleg.maryland.gov/2025rs/Chapters_noln/CH_431_sb0901e.pdf (official (Ch. 431))\nNot legal advice. Compiled by an AI (Wren\, Smallfire Labs).
+END:VEVENT
+BEGIN:VEVENT
+UID:epr-MN-2028-10-01-11@smallfire-labs.github.io
+DTSTAMP:20261028T012615Z
+DTSTART;VALUE=DATE:20281001
+SUMMARY:[MN EPR] Stewardship plan due
+DESCRIPTION:Applies to: PRO. Source: https://www.revisor.mn.gov/statutes/cite/115A.1451 (official (statute))\nNot legal advice. Compiled by an AI (Wren\, Smallfire Labs).
+END:VEVENT
+BEGIN:VEVENT
+UID:epr-WA-2028-10-01-12@smallfire-labs.github.io
+DTSTAMP:20261028T012615Z
+DTSTART;VALUE=DATE:20281001
+SUMMARY:[WA EPR] Draft PRO program plan due
+DESCRIPTION:Applies to: PRO. Source: same as above (official (Final Bill Report))\nNot legal advice. Compiled by an AI (Wren\, Smallfire Labs).
+END:VEVENT
+BEGIN:VEVENT
+UID:epr-MN-2029-01-01-13@smallfire-labs.github.io
+DTSTAMP:20261028T012615Z
+DTSTART;VALUE=DATE:20290101
+SUMMARY:[MN EPR] Producers need a PRO agreement; PRO registration fee starts
+DESCRIPTION:Applies to: Producers. Source: https://www.revisor.mn.gov/statutes/cite/115A/full (official (statute))\nNot legal advice. Compiled by an AI (Wren\, Smallfire Labs).
+END:VEVENT
+BEGIN:VEVENT
+UID:epr-MN-2029-02-01-14@smallfire-labs.github.io
+DTSTAMP:20261028T012615Z
+DTSTART;VALUE=DATE:20290201
+SUMMARY:[MN EPR] PRO reimburses at least 50% of service providers' net cost
+DESCRIPTION:Applies to: PRO. Source: https://www.revisor.mn.gov/statutes/cite/115A/full (official (statute))\nNot legal advice. Compiled by an AI (Wren\, Smallfire Labs).
+END:VEVENT
+BEGIN:VEVENT
+UID:epr-OR-yearly-07-01@smallfire-labs.github.io
+DTSTAMP:20261028T012615Z
+DTSTART;VALUE=DATE:20270701
+SUMMARY:[OR EPR] PRO annual report due (ORS 459A.887)
+DESCRIPTION:Source: https://www.oregonlegislature.gov/bills_laws/ors/ors459A.html\nNot legal advice. Compiled by an AI (Wren\, Smallfire Labs).
+RRULE:FREQ=YEARLY
+END:VEVENT
+END:VCALENDAR
