@@ -1,0 +1,22 @@
+material_class,reporting_category,total_kg,kg_from_components_needing_customer_check,"arithmetic (units x grams per unit, summed)"
+Glass and Ceramics,Glass Bottles and Jars & Other Containers,467.500,0.000,EF-001/amber glass jar 8oz=1200x230g + EF-003/frosted glass jar 12oz=450x340g + EF-005/amber glass dropper bottle 1oz=700x55g
+Metal,Aluminum Containers,81.000,81.000,EF-002/aluminum candle tin with lid 4oz=800x45g + EF-008/aluminum salve tin 2oz=1500x30g
+Metal,Steel Containers,28.500,28.500,EF-010/steel coffee tin 8oz=300x95g
+Metal,Steel - Other Forms,26.400,26.400,EF-001/tin lid=1200x22g
+Paper/Fiber,Kraft Paper,22.400,22.400,EF-001/paper crinkle fill=1200x12g + EF-002/paper crinkle fill=800x10g
+Paper/Fiber,Corrugated Cardboard,765.500,367.000,EF-001/kraft mailer box=1200x110g + EF-002/kraft mailer box=800x85g + EF-003/corrugated shipper box=450x150g + EF-006/kraft mailer box=1100x100g + EF-007/kraft mailer box=600x95g + EF-009/corrugated shipper box=2000x140g + EF-010/corrugated shipper box=300x170g
+Paper/Fiber,Paperboard,148.200,0.000,EF-001/paperboard gift box=1200x48g + EF-002/paperboard sleeve=800x14g + EF-003/paperboard gift box=450x60g + EF-004/paperboard carton=950x20g + EF-005/paperboard carton=700x22g + EF-008/paperboard carton=1500x12g
+Paper/Fiber,Other Paper Packaging,6.300,6.300,EF-005/molded pulp insert=700x9g
+Plastic - Rigid,"PET (#1) - Bottles, Jugs, and Jars (Clear/Natural)",19.200,19.200,EF-007/clear PET jar 8oz=600x32g
+Plastic - Rigid,"HDPE (#2) - Bottles, Jugs and Jars (Pigmented/Color)",44.000,44.000,EF-006/white HDPE pump bottle 8oz=1100x40g
+Plastic - Rigid,HDPE (#2) - Other Rigid Items,15.200,15.200,EF-004/squeeze tube 4oz plastic=950x16g
+Plastic - Rigid,LDPE (#4) - Lids,3.600,3.600,EF-010/plastic snap lid=300x12g
+Plastic - Rigid,PP (#5) - Lids,11.100,11.100,EF-004/flip cap=950x6g + EF-007/screw lid=600x9g
+Plastic - Rigid,*PS (#6) White Expanded/Foamed Cushioning,8.100,8.100,EF-003/white foam cushion block=450x18g
+Plastic - Rigid,Other/Mixed Rigid Plastic,21.000,21.000,EF-005/dropper assembly rubber bulb and plastic collar=700x8g + EF-006/pump dispenser=1100x14g
+Plastic - Flexible,HDPE (#2)/LDPE (#4) Flexible and Film Items,29.450,29.450,EF-001/poly bag=1200x6g + EF-004/poly bag=950x5g + EF-006/poly bag=1100x5g + EF-008/poly mailer=1500x8g
+Plastic - Flexible,PP (#5) Flexible and Film Items,6.000,6.000,EF-009/polypropylene packing tape=2000x3g
+Plastic - Flexible,"PLA, PHA, PHB - Flexible and Film Items",7.500,7.500,EF-010/compostable mailer=300x25g
+Plastic - Flexible,Plastic Laminates and Other Flexible Plastic Packaging,45.200,45.200,EF-007/shrink band=600x2g + EF-009/kraft foil-lined stand-up pouch with zipper=2000x22g
+Wood and Other Organic Materials,Wood and Other Organic Materials,17.100,17.100,EF-003/bamboo lid=450x38g
+TOTAL,,1773.250,759.050,sum of rows above

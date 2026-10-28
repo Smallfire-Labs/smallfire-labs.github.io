@@ -1,0 +1,31 @@
+component_description,material_class,reporting_category,confidence,needs_customer_check,reason
+amber glass jar 8oz,Glass and Ceramics,Glass Bottles and Jars & Other Containers,high,no,Glass jar; category explicitly covers jars. (Colour not a separate category.)
+tin lid,Metal,Steel - Other Forms,low,yes,'Tin' is ambiguous: could be steel (tinplate) or aluminum; lid may be under 'Metal - Small Format' depending on size. Customer to confirm metal and dimensions.
+paperboard gift box,Paper/Fiber,Paperboard,high,no,Folding carton; confirm no plastic window/coating/lamination.
+kraft mailer box,Paper/Fiber,Corrugated Cardboard,medium,yes,'Kraft' may mean corrugated (shipping) or solid paperboard. Confirm flute/corrugated vs folding carton. Also note the tertiary/transport category exists only for non-consumer packaging.
+paper crinkle fill,Paper/Fiber,Kraft Paper,medium,yes,Could be Kraft Paper or Other Paper Packaging; confirm paper type and no coating.
+poly bag,Plastic - Flexible,HDPE (#2)/LDPE (#4) Flexible and Film Items,medium,yes,Resin unknown. Assumed PE film; if PP or laminated it belongs elsewhere.
+aluminum candle tin with lid 4oz,Metal,Aluminum Containers,medium,yes,Confirm aluminum (not steel) and whether lid is a separate material or small-format; confirm size/shape fits 'Containers'.
+paperboard sleeve,Paper/Fiber,Paperboard,high,no,Plain paperboard sleeve; confirm no coating.
+frosted glass jar 12oz,Glass and Ceramics,Glass Bottles and Jars & Other Containers,high,no,Glass jar; frosting/coating assumed not to change the category.
+bamboo lid,Wood and Other Organic Materials,Wood and Other Organic Materials,medium,yes,Bamboo assumed 'organic material'; confirm it is not plastic-lined or has silicone seal (weight of seal).
+corrugated shipper box,Paper/Fiber,Corrugated Cardboard,high,no,"Corrugated. Whether shipping boxes sent to consumers count as covered is for the customer to determine, not us."
+white foam cushion block,Plastic - Rigid,*PS (#6) White Expanded/Foamed Cushioning,medium,yes,Assumed EPS from description 'foam'; could be PE foam or other. Resin unknown.
+squeeze tube 4oz plastic,Plastic - Rigid,HDPE (#2) - Other Rigid Items,low,yes,Tubes are often multi-layer laminate (plastic/foil) or LDPE; no tube-specific category in the list. Resin and construction unknown.
+flip cap,Plastic - Rigid,PP (#5) - Lids,medium,yes,Flip caps are usually PP but may include hinge/ liner of other resin; small-format check (under 2 inches?) not done.
+paperboard carton,Paper/Fiber,Paperboard,high,no,Folding carton; confirm no coating or plastic window.
+amber glass dropper bottle 1oz,Glass and Ceramics,Glass Bottles and Jars & Other Containers,high,no,Glass bottle.
+dropper assembly rubber bulb and plastic collar,Plastic - Rigid,Other/Mixed Rigid Plastic,low,yes,Multi-material (rubber + plastic + possibly glass pipette). Needs breakdown by material or confirmation how to treat.
+molded pulp insert,Paper/Fiber,Other Paper Packaging,medium,yes,Table 19 has no separate molded pulp category for 2025/2026 fees (a molded-pulp food serviceware split is planned for 2027 only). Assumed Other Paper Packaging.
+white HDPE pump bottle 8oz,Plastic - Rigid,"HDPE (#2) - Bottles, Jugs and Jars (Pigmented/Color)",medium,yes,"White opaque assumed pigmented, not clear/natural; resin HDPE per customer description, unverified."
+pump dispenser,Plastic - Rigid,Other/Mixed Rigid Plastic,low,yes,"Multi-material (PP, metal spring, etc.); needs material breakdown."
+clear PET jar 8oz,Plastic - Rigid,"PET (#1) - Bottles, Jugs, and Jars (Clear/Natural)",medium,yes,Resin code PET taken from description; confirm stamp on base. Table 19 has no separate 'PET jar' vs 'bottle'; jar included in this category.
+screw lid,Plastic - Rigid,PP (#5) - Lids,low,yes,"Lid resin not stated (could be PP, PE, or metal/other). Assumed PP."
+shrink band,Plastic - Flexible,Plastic Laminates and Other Flexible Plastic Packaging,low,yes,"Shrink sleeves are PVC, PETG or OPS; no obvious category. Resin unknown."
+aluminum salve tin 2oz,Metal,Aluminum Containers,medium,yes,Small item: check whether it counts as 'Metal - Small Format' (size threshold in CAA guidance not verified here).
+poly mailer,Plastic - Flexible,HDPE (#2)/LDPE (#4) Flexible and Film Items,medium,yes,Resin unknown; assumed PE; may be co-extruded.
+kraft foil-lined stand-up pouch with zipper,Plastic - Flexible,Plastic Laminates and Other Flexible Plastic Packaging,low,yes,Multi-material laminate (paper/foil/plastic + zipper). Cannot determine dominant material; customer to supply spec sheet.
+polypropylene packing tape,Plastic - Flexible,PP (#5) Flexible and Film Items,low,yes,"Tape includes adhesive; whether tape is reportable packaging is for the customer; if included, this is a guess."
+steel coffee tin 8oz,Metal,Steel Containers,medium,yes,Confirm steel (magnet test) and no plastic liner.
+plastic snap lid,Plastic - Rigid,LDPE (#4) - Lids,low,yes,Resin not stated; snap lids are commonly LDPE or PP. Assumed LDPE.
+compostable mailer,Plastic - Flexible,"PLA, PHA, PHB - Flexible and Film Items",low,yes,'Compostable' does not prove PLA/PHA; may be PBAT blend or paper. Need supplier spec.

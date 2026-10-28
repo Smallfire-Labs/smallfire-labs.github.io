@@ -1,0 +1,13 @@
+# FICTIONAL SAMPLE DATA - "Ember & Fern Co." does not exist. All SKUs, unit counts and weights are invented for demonstration only.
+# units_sold_oregon_2025 = invented units shipped to Oregon addresses in calendar 2025. packaging_components = "description:grams" pairs separated by semicolons (grams per unit sold).
+SKU,product_name,units_sold_oregon_2025,packaging_components
+EF-001,Cedar & Smoke Soy Candle 8oz,1200,amber glass jar 8oz:230; tin lid:22; paperboard gift box:48; kraft mailer box:110; paper crinkle fill:12; poly bag:6
+EF-002,Travel Candle Tin 4oz,800,aluminum candle tin with lid 4oz:45; paperboard sleeve:14; kraft mailer box:85; paper crinkle fill:10
+EF-003,Bamboo-Lid Candle 12oz,450,frosted glass jar 12oz:340; bamboo lid:38; paperboard gift box:60; corrugated shipper box:150; white foam cushion block:18
+EF-004,Rose Hand Cream 4oz,950,squeeze tube 4oz plastic:16; flip cap:6; paperboard carton:20; poly bag:5
+EF-005,Face Serum 1oz,700,amber glass dropper bottle 1oz:55; dropper assembly rubber bulb and plastic collar:8; paperboard carton:22; molded pulp insert:9
+EF-006,Body Lotion 8oz,1100,white HDPE pump bottle 8oz:40; pump dispenser:14; kraft mailer box:100; poly bag:5
+EF-007,Sugar Scrub 8oz,600,clear PET jar 8oz:32; screw lid:9; shrink band:2; kraft mailer box:95
+EF-008,Lip Salve Tin 2oz,1500,aluminum salve tin 2oz:30; paperboard carton:12; poly mailer:8
+EF-009,Whole Bean Coffee 12oz,2000,kraft foil-lined stand-up pouch with zipper:22; corrugated shipper box:140; polypropylene packing tape:3
+EF-010,Coffee Gift Tin 8oz,300,steel coffee tin 8oz:95; plastic snap lid:12; compostable mailer:25; corrugated shipper box:170
