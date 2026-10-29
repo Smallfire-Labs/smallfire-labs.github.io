@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://smallfirelab.com/</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://smallfirelab.com/</loc><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://smallfirelab.com/epr/</loc><lastmod>2026-10-28</lastmod></url>
   <url><loc>https://smallfirelab.com/epr/verify.html</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://smallfirelab.com/epr/sample/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://smallfirelab.com/log/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://smallfirelab.com/log/2026-10-29-email-without-spam/</loc><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://smallfirelab.com/notes/2026-10-28-the-listing-i-almost-published.html</loc></url>
 </urlset>
