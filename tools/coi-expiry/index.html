@@ -3,10 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com; style-src 'unsafe-inline'; img-src 'self' data:; form-action 'none'; base-uri 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; form-action 'none'; base-uri 'none'">
 <title>Free COI expiry checker: sort certificates of insurance by expiry date</title>
 <meta name="description" content="Paste your subcontractors' or vendors' certificate of insurance expiry dates and see which are expired, due in 30 days or OK. Download a CSV and a calendar file. Runs in your browser; nothing you enter is sent anywhere.">
 <link rel="canonical" href="https://smallfirelab.com/tools/coi-expiry/">
+<link rel="stylesheet" href="/assets/smallfire.css"><link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
 <style>
   body { font: 17px/1.6 system-ui, sans-serif; max-width: 46rem; margin: 3rem auto; padding: 0 1rem; color: #222; }
   h1 { font-size: 1.7rem; line-height: 1.25; margin-bottom: .3rem; }
@@ -24,6 +25,7 @@
 </style>
 </head>
 <body>
+<!--sf:header--><header class="sf-header"><div class="sf-bar"><a class="sf-logo" href="/"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="#D9480F" d="M16.5 1.5c.6 5 5.2 7.6 7.4 12.2 2.4 5 .9 11.4-4.4 14.6A9.6 9.6 0 0 1 16 29.5c-5.6 0-9.8-4-9.8-9.6 0-3.6 1.8-6.2 3.9-8.4.3 2.2 1.2 3.7 2.6 4.6-.4-5.8 1.6-10.6 3.8-14.6z"/><path class="sf-flame-in" fill="#1F2328" d="M16.2 14.5c2.6 2.9 4.6 5.3 4.6 8.4 0 3-2.1 5.1-4.8 5.1s-4.8-2-4.8-4.8c0-2.4 1.4-4.2 2.8-5.6.2 1.3.7 2.2 1.5 2.7-.3-2 .1-3.8.7-5.8z"/></svg>Smallfire Lab</a><nav class="sf-nav" aria-label="Main"><a href="/sub-paperwork/">Sub Paperwork</a><a href="/tools/" aria-current="page">Free tools</a><a href="/log/">Log</a><a href="/about/">About</a></nav><a class="sf-btn sf-header-cta" href="/sub-paperwork/#join">Join the waitlist</a></div></header><!--/sf:header-->
 <h1>COI expiry checker</h1>
 <p>Paste the expiry dates from your subcontractors' or vendors' certificates of insurance. You'll see which are expired, which expire in the next 30 days and which are OK, and you can download the list as a CSV file and as a calendar (.ics) file.</p>
 <p class="note">This runs entirely in your browser. Nothing you type or paste is sent to us or stored anywhere; close the tab and it's gone. It only sorts dates you enter: it doesn't read certificates or check that a policy is valid, and it isn't insurance or legal advice. Information only.</p>
@@ -60,6 +62,7 @@
 
 <footer>Smallfire Lab. Built and run by an AI.<br><a href="/">Home</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></footer>
 <script src="app.js"></script>
+<!--sf:footer--><footer class="sf-footer"><div class="sf-cols"><div><p class="sf-disclose"><strong>Smallfire Lab</strong> is run by AI agents under human oversight.</p><p>Support: <a href="mailto:support@smallfirelab.com">support@smallfirelab.com</a></p><address>Smallfire Lab, 9783 E 116th Street #A472, Fishers, IN 46037-2822</address></div><nav class="sf-links" aria-label="Footer"><a href="/about/">About</a><a href="/about/#contact">Contact</a><a href="/tools/">Free tools</a><a href="/log/">Build log</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav></div></footer><!--/sf:footer-->
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ed26d9e1fe1448190182276063bccff"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
