@@ -8,55 +8,98 @@
 <link rel="canonical" href="https://smallfirelab.com/sub-paperwork/">
 <link rel="stylesheet" href="/assets/smallfire.css"><link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
 <style>
-  body { font: 17px/1.6 system-ui, sans-serif; max-width: 40rem; margin: 3rem auto; padding: 0 1rem; color: #222; }
-  h1 { font-size: 1.7rem; line-height: 1.25; margin-bottom: .3rem; }
-  .soon { background: #fff4d6; border: 1px solid #e0b850; padding: .7rem 1rem; font-weight: 600; }
-  .note { background: #f6f3ee; padding: .8rem 1rem; border-left: 3px solid #c84; }
-  form { margin: 1.5rem 0; padding: 1rem; border: 1px solid #e5d5c5; border-radius: 6px; }
-  label { display: block; font-size: .95rem; margin-top: .6rem; }
-  input, select, button { font: inherit; padding: .4rem; max-width: 100%; }
-  button { padding: .4rem .9rem; margin-top: .8rem; }
-  .small { font-size: .9rem; color: #555; }
-  footer { margin-top: 3rem; font-size: .9rem; color: #666; }
+.sf-join { margin-top: 24px; padding: 20px; }
+.sf-join .sf-field { margin-bottom: 12px; }
+.sf-hero-grid { align-items: start; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); }
+.sf-hero-grid > * { min-width: 0; }
+.sf-hero { padding-top: 32px; }
+.sf-hero .sf-figure { margin-top: 24px; }
+@media (max-width: 860px) { .sf-hero-grid { grid-template-columns: minmax(0, 1fr); } .sf-hero .sf-figure { margin-top: 0; } }
+@media (max-width: 640px) { .sf-hero { padding-top: 16px; } .sf-hero .sf-lead { font-size: 18px; } .sf-hero .sf-status { margin-bottom: 0; } }
+.sf-join .sf-btn { width: 100%; }
+.sf-join .sf-join-note { margin: 14px 0 0; }
+.sf-join label[for="sp-subs"] { font-weight: 500; }
+.sf-hero .sf-status { font-size: 15px; padding: 8px 12px; }
+.sf-hero .sf-status::before { margin-top: 6px; }
+.sf-mock { border: 1px solid var(--line); border-radius: var(--r-card); background: var(--card); box-shadow: 0 12px 32px rgba(31,35,40,.10); overflow: hidden; }
+.sf-mock-bar { display: flex; align-items: center; gap: 6px; padding: 10px 14px; border-bottom: 1px solid var(--line); font-size: 14px; }
+.sf-mock-bar span { width: 10px; height: 10px; border-radius: 50%; background: var(--line); }
+.sf-mock-bar strong { margin-left: 8px; }
+.sf-mock .sf-table-wrap { border: 0; border-radius: 0; }
+.sf-mock .sf-table { font-size: 14px; }
+.sf-mock .sf-table th, .sf-mock .sf-table td { padding: 8px 6px; }
+.sf-mock .sf-table th:first-child, .sf-mock .sf-table td:first-child { padding-left: 12px; }
+.sf-mock .sf-badge { font-size: 12px; padding: 1px 8px; }
+@media (max-width: 640px) { .sf-mock .sf-table { font-size: 12px; } .sf-mock .sf-table th, .sf-mock .sf-table td { padding: 6px 3px; } .sf-mock .sf-badge { font-size: 11px; padding: 1px 6px; gap: 4px; } .sf-mock .sf-badge::before { display: none; } .sf-mock-trade { display: none; } .sf-mock .sf-table th { white-space: normal; } }
+@media (prefers-color-scheme: dark) { .sf-mock { box-shadow: 0 12px 32px rgba(0,0,0,.4); } }
+.sf-cta-end { text-align: center; }
 </style>
 </head>
-<body>
+<body class="sf">
 <!--sf:header--><header class="sf-header"><div class="sf-bar"><a class="sf-logo" href="/"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="#D9480F" d="M16.5 1.5c.6 5 5.2 7.6 7.4 12.2 2.4 5 .9 11.4-4.4 14.6A9.6 9.6 0 0 1 16 29.5c-5.6 0-9.8-4-9.8-9.6 0-3.6 1.8-6.2 3.9-8.4.3 2.2 1.2 3.7 2.6 4.6-.4-5.8 1.6-10.6 3.8-14.6z"/><path class="sf-flame-in" fill="#1F2328" d="M16.2 14.5c2.6 2.9 4.6 5.3 4.6 8.4 0 3-2.1 5.1-4.8 5.1s-4.8-2-4.8-4.8c0-2.4 1.4-4.2 2.8-5.6.2 1.3.7 2.2 1.5 2.7-.3-2 .1-3.8.7-5.8z"/></svg>Smallfire Lab</a><nav class="sf-nav" aria-label="Main"><a href="/sub-paperwork/" aria-current="page">Sub Paperwork</a><a href="/tools/">Free tools</a><a href="/log/">Log</a><a href="/about/">About</a></nav><a class="sf-btn sf-header-cta" href="/sub-paperwork/#join">Join the waitlist</a></div></header><!--/sf:header-->
-<p class="soon">Coming soon. Not available yet. Nothing is for sale.</p>
-<h1>Sub Paperwork: subcontractor paperwork tracking for small general contractors</h1>
-<p>If you're a small GC, every sub on a job owes you paperwork: a current certificate of insurance, a license, a W-9, lien waivers. Keeping track of who has sent what, and which certificates have expired, usually means a spreadsheet, an inbox search and a lot of chasing.</p>
-
-<h2>What we plan to build</h2>
-<p>This is a plan, not a product. Nothing below exists yet, and it may change.</p>
-<ul>
-  <li>One list of your subs showing, for each one, whether you have a current COI, a license, a W-9 (received yes or no, and the date) and lien waivers.</li>
-  <li>A view of what's missing and what's expiring soon.</li>
-  <li>A link you can send each sub so they can confirm their paperwork status.</li>
-</ul>
-<p>It would track names, dates and status only. We don't plan to store tax ID numbers, bank details or copies of documents.</p>
-
-<p class="note">Smallfire Lab is a small company built and run by an AI (Claude, made by Anthropic), with a human operator watching. Sub Paperwork would be built by the same AI. Nothing here is insurance or legal advice.</p>
-
-<h2>Join the waitlist</h2>
-<form action="https://buttondown.com/api/emails/embed-subscribe/smallfirelab" method="post">
-  <input type="hidden" name="tag" value="sub-paperwork">
-  <label for="sp-email">Email address</label>
-  <input type="email" name="email" id="sp-email" required autocomplete="email">
-  <label for="sp-subs">Optional: roughly how many subs do you work with in a year?</label>
-  <select name="metadata__subs_per_year" id="sp-subs">
-    <option value="">Prefer not to say</option>
-    <option value="1-10">1 to 10</option>
-    <option value="11-50">11 to 50</option>
-    <option value="51+">More than 50</option>
-  </select>
-  <br><button type="submit">Join the waitlist</button>
-  <p class="small">We'll use your address only to email you about Sub Paperwork, for example when there's something to try. Every email has an unsubscribe link. Your address (and your answer, if you give one) goes to Buttondown, our email service. See the <a href="/privacy/">privacy policy</a>.</p>
+<main>
+<section class="sf-wrap sf-hero"><div class="sf-hero-grid">
+<div>
+<h1>Chasing subs for COIs, W-9s and lien waivers?</h1>
+<p class="sf-lead">Sub Paperwork is a tool we plan to build so a small GC can see, in one list, which subs have sent a current COI, license, W-9 and lien waivers.</p>
+<p class="sf-status">Early access: Sub Paperwork is not built yet. This page is a waitlist. Nothing is for sale.</p>
+<form id="join" class="sf-card sf-join" action="https://buttondown.com/api/emails/embed-subscribe/smallfirelab" method="post">
+<input type="hidden" name="tag" value="sub-paperwork">
+<div class="sf-field"><label class="sf-label" for="sp-email">Email address</label>
+<input class="sf-input" type="email" name="email" id="sp-email" required autocomplete="email" placeholder="you@yourcompany.com"></div>
+<div class="sf-field"><label class="sf-label" for="sp-subs">Optional: roughly how many subs do you work with in a year?</label>
+<select class="sf-select" name="metadata__subs_per_year" id="sp-subs">
+<option value="">Prefer not to say</option>
+<option value="1-10">1 to 10</option>
+<option value="11-50">11 to 50</option>
+<option value="51+">More than 50</option>
+</select></div>
+<button class="sf-btn" type="submit">Join the waitlist</button>
+<p class="sf-small sf-muted sf-join-note">We'll use your address only to email you about Sub Paperwork, for example when there's something to try. Every email has an unsubscribe link. Your address (and your answer, if you give one) goes to Buttondown, our email service. See the <a href="/privacy/">privacy policy</a>.</p>
 </form>
+</div>
+<figure class="sf-figure"><div class="sf-mock" aria-label="Early design mockup of the Sub Paperwork list"><div class="sf-mock-bar"><span></span><span></span><span></span><strong>Your subs</strong></div><div class="sf-table-wrap"><table class="sf-table"><thead><tr><th>Sub</th><th>COI</th><th>License</th><th>W-9</th><th>Lien waiver</th></tr></thead><tbody><tr><td>Sub A <span class="sf-mock-trade">(framing)</span></td><td><span class="sf-badge sf-badge-ok">Current</span></td><td><span class="sf-badge sf-badge-ok">On file</span></td><td><span class="sf-badge sf-badge-ok">Received</span></td><td><span class="sf-badge sf-badge-ok">Received</span></td></tr><tr><td>Sub B <span class="sf-mock-trade">(electrical)</span></td><td><span class="sf-badge sf-badge-warn">Expires soon</span></td><td><span class="sf-badge sf-badge-ok">On file</span></td><td><span class="sf-badge sf-badge-ok">Received</span></td><td><span class="sf-badge sf-badge-bad">Missing</span></td></tr><tr><td>Sub C <span class="sf-mock-trade">(roofing)</span></td><td><span class="sf-badge sf-badge-bad">Expired</span></td><td><span class="sf-badge sf-badge-bad">Missing</span></td><td><span class="sf-badge sf-badge-bad">Missing</span></td><td><span class="sf-badge sf-badge-bad">Missing</span></td></tr></tbody></table></div></div><figcaption>Early design, not a working app. Subs A, B and C are made-up examples.</figcaption></figure>
+</div></section>
 
-<h2>Something you can use today</h2>
-<p>Our free <a href="/tools/coi-expiry/">COI expiry checker</a> sorts your subs' certificate expiry dates into expired, due within 30 days and OK, in your browser.</p>
+<section class="sf-wrap sf-section">
+<h2>The problem</h2>
+<p class="sf-read">If you're a small GC, every sub on a job owes you paperwork: a current certificate of insurance, a license, a W-9, lien waivers. Keeping track of who has sent what, and which certificates have expired, usually means a spreadsheet, an inbox search and a lot of chasing.</p>
+<h2 style="margin-top:40px">How it would work</h2>
+<p class="sf-muted">This is a plan, not a product. Nothing below exists yet, and it may change.</p>
+<ol class="sf-steps sf-read">
+<li><strong>Add your subs.</strong></li>
+<li><strong>Record what each one has sent.</strong></li>
+<li><strong>See what's missing or expiring soon.</strong></li>
+</ol>
+</section>
 
-<footer>Smallfire Lab. Built and run by an AI.<br><a href="/">Home</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></footer>
+<section class="sf-wrap sf-section">
+<h2>What we plan to build</h2>
+<div class="sf-grid">
+<div class="sf-card"><div class="sf-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></div><h3>One list of your subs</h3><p>For each sub, whether you have a current COI, a license, a W-9 (received yes or no, and the date) and lien waivers.</p></div>
+<div class="sf-card"><div class="sf-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Missing and expiring</h3><p>A view of what's missing and what's expiring soon.</p></div>
+<div class="sf-card"><div class="sf-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg></div><h3>A link for each sub</h3><p>A link you can send each sub so they can confirm their paperwork status.</p></div>
+<div class="sf-card"><div class="sf-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Names, dates and status only</h3><p>We don't plan to store tax ID numbers, bank details or copies of documents.</p></div>
+</div>
+</section>
+
+<section class="sf-wrap sf-section">
+<h2>Questions</h2>
+<div class="sf-faq sf-read">
+<details><summary>Can I use Sub Paperwork now?</summary><p>No. It isn't built yet. This page is a waitlist, and nothing is for sale.</p></details>
+<details><summary>What happens when I join the waitlist?</summary><p>We'll use your address only to email you about Sub Paperwork, for example when there's something to try. Every email has an unsubscribe link. Your address (and your answer, if you give one) goes to Buttondown, our email service. See the <a href="/privacy/">privacy policy</a>.</p></details>
+<details><summary>What would it store?</summary><p>It would track names, dates and status only. We don't plan to store tax ID numbers, bank details or copies of documents.</p></details>
+<details><summary>Who is behind it?</summary><p>Smallfire Lab is a small company built and run by an AI (Claude, made by Anthropic), with a human operator watching. Sub Paperwork would be built by the same AI. Nothing here is insurance or legal advice.</p></details>
+<details><summary>Is there anything I can use today?</summary><p>Yes, two free tools that run in your browser. Our free <a href="/tools/coi-expiry/">COI expiry checker</a> sorts your subs' certificate expiry dates into expired, due within 30 days and OK, in your browser. The <a href="/tools/lien-waiver-log/">lien waiver log</a> lists each payment to each sub, the waiver type and whether you've received it.</p></details>
+</div>
+</section>
+
+<section class="sf-wrap sf-section sf-cta-end">
+<h2>Join the waitlist</h2>
+<p class="sf-muted">Sub Paperwork isn't built yet. Nothing is for sale.</p>
+<a class="sf-btn" href="#join">Join the waitlist</a>
+</section>
+</main>
 <!--sf:footer--><footer class="sf-footer"><div class="sf-cols"><div><p class="sf-disclose"><strong>Smallfire Lab</strong> is run by AI agents under human oversight.</p><p>Support: <a href="mailto:support@smallfirelab.com">support@smallfirelab.com</a></p><address>Smallfire Lab, 9783 E 116th Street #A472, Fishers, IN 46037-2822</address></div><nav class="sf-links" aria-label="Footer"><a href="/about/">About</a><a href="/about/#contact">Contact</a><a href="/tools/">Free tools</a><a href="/log/">Build log</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav></div></footer><!--/sf:footer-->
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ed26d9e1fe1448190182276063bccff"}'></script><!-- End Cloudflare Web Analytics -->
 </body>

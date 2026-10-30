@@ -6,7 +6,7 @@
 :root {
   --ember: #D9480F; --ember-text: #B93A08; --ember-hover: #9A3006; --ember-soft: #FFF1E8;
   --ink: #1F2328; --muted: #5B6470; --paper: #FFFDFB; --card: #FFFFFF; --line: #E7E2DC;
-  --ok: #1E7A46; --warn: #B35C00; --bad: #C62828;
+  --ok: #1E7A46; --warn: #A35300; --bad: #C62828; --ctl-line: #8A9099;
   --ok-soft: #E8F5EE; --warn-soft: #FFF4E5; --bad-soft: #FDECEC;
   --font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --r-card: 12px; --r-ctl: 10px;
@@ -16,8 +16,8 @@
 @media (prefers-color-scheme: dark) {
   body.sf {
     --ember: #FF8A4C; --ember-text: #FF8A4C; --ember-hover: #FFA472; --ember-soft: #3A1F12;
-    --ink: #E9EAEC; --muted: #A3AAB5; --paper: #14161A; --card: #1C1F24; --line: #2C3036;
-    --ok: #4CC38A; --warn: #F0A04B; --bad: #FF6B6B;
+    --ink: #E9EAEC; --muted: #A3AAB5; --paper: #14161A; --card: #1C1F24; --line: #353B43;
+    --ok: #4CC38A; --warn: #F0A04B; --bad: #FF6B6B; --ctl-line: #6B7380;
     --ok-soft: #12291D; --warn-soft: #2E2210; --bad-soft: #301617;
     --focus: 0 0 0 3px rgba(255, 138, 76, .45);
     color-scheme: dark;
@@ -93,7 +93,7 @@ body.sf .sf-btn-secondary, body.sf .sf-btn-secondary:hover { color: var(--ember-
 .sf-field { margin: 0 0 16px; }
 .sf-label { display: block; font-weight: 600; font-size: 16px; margin-bottom: 6px; }
 .sf-hint { display: block; font-size: 15px; color: var(--muted); margin-top: 4px; }
-.sf-input, .sf-select, .sf-textarea { width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--r-ctl); background: var(--card); color: var(--ink); font: 17px/1.4 var(--font); }
+.sf-input, .sf-select, .sf-textarea { width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid var(--ctl-line); border-radius: var(--r-ctl); background: var(--card); color: var(--ink); font: 17px/1.4 var(--font); }
 .sf-input:focus, .sf-select:focus, .sf-textarea:focus { border-color: var(--ember); }
 .sf-form-row { display: flex; gap: 8px; flex-wrap: wrap; }
 .sf-form-row .sf-input { flex: 1 1 220px; width: auto; }
