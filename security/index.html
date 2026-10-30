@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Security | Smallfire Lab</title>
+<meta name="description" content="How smallfirelab.com handles your data today, and how to report a security problem to Smallfire Lab.">
+<link rel="canonical" href="https://smallfirelab.com/security/">
+<link rel="stylesheet" href="/assets/smallfire.css"><link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+</head>
+<body class="sf">
+<!--sf:header--><header class="sf-header"><div class="sf-bar"><a class="sf-logo" href="/"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="#D9480F" d="M16.5 1.5c.6 5 5.2 7.6 7.4 12.2 2.4 5 .9 11.4-4.4 14.6A9.6 9.6 0 0 1 16 29.5c-5.6 0-9.8-4-9.8-9.6 0-3.6 1.8-6.2 3.9-8.4.3 2.2 1.2 3.7 2.6 4.6-.4-5.8 1.6-10.6 3.8-14.6z"/><path class="sf-flame-in" fill="#1F2328" d="M16.2 14.5c2.6 2.9 4.6 5.3 4.6 8.4 0 3-2.1 5.1-4.8 5.1s-4.8-2-4.8-4.8c0-2.4 1.4-4.2 2.8-5.6.2 1.3.7 2.2 1.5 2.7-.3-2 .1-3.8.7-5.8z"/></svg>Smallfire Lab</a><nav class="sf-nav" aria-label="Main"><a href="/sub-paperwork/">Sub Paperwork</a><a href="/tools/">Free tools</a><a href="/log/">Log</a><a href="/about/">About</a></nav><a class="sf-btn sf-header-cta" href="/sub-paperwork/#join">Join the waitlist</a></div></header><!--/sf:header-->
+<main class="sf-wrap sf-section"><div class="sf-read">
+<h1>Security</h1>
+<p class="sf-lead">How this website handles your data today, and how to tell us about a security problem.</p>
+<p>This page covers only what exists today: this website, its free tools and the Sub Paperwork waitlist. Sub Paperwork itself isn't built yet.</p>
+<h2>This website</h2>
+<ul>
+<li>smallfirelab.com is a static website hosted on GitHub Pages. It has no user accounts and no logins.</li>
+<li>Pages are served over HTTPS. Plain HTTP addresses redirect to HTTPS.</li>
+<li>The site sets no cookies. Page views are counted by Cloudflare Web Analytics, which is cookieless.</li>
+</ul>
+<h2>The free tools run in your browser</h2>
+<ul>
+<li>The <a href="/tools/coi-expiry/">COI expiry checker</a> and the <a href="/tools/lien-waiver-log/">lien waiver log</a> run entirely in your browser. What you type or paste into them is not sent to us. As on every page, only the page view itself is counted by Cloudflare Web Analytics.</li>
+<li>The lien waiver log saves what you enter in your browser's local storage on your device. Its "Clear all" button deletes it.</li>
+<li>Both tool pages set a Content Security Policy that only lets them load scripts from this site and Cloudflare's analytics, and blocks form submissions.</li>
+</ul>
+<h2>The waitlist</h2>
+<p>If you join the Sub Paperwork waitlist, your email address goes to Buttondown, our email service. Our <a href="/privacy/">privacy policy</a> explains what we collect and how to have it deleted.</p>
+<div class="sf-card" style="margin-top:32px">
+<h2 id="report" style="margin-top:0">Report a security problem</h2>
+<p>Email <a href="mailto:support@smallfirelab.com?subject=Security">support@smallfirelab.com</a> with "Security" in the subject. Please include the page address, what you found and how to reproduce it. Replies are written by an AI.</p>
+<p>When testing, please don't access or change other people's data, and don't run tests that slow the site down for other visitors. We don't offer paid rewards.</p>
+<p><a class="sf-btn sf-btn-secondary" href="mailto:support@smallfirelab.com?subject=Security">Email a security report</a></p>
+<p>The same contact is published in machine-readable form at <a href="/.well-known/security.txt" style="white-space:nowrap">/.well-known/security.txt</a>.</p>
+</div>
+</div></main>
+<!--sf:footer--><footer class="sf-footer"><div class="sf-cols"><div><p class="sf-disclose"><strong>Smallfire Lab</strong> is run by AI agents under human oversight.</p><p>Support: <a href="mailto:support@smallfirelab.com">support@smallfirelab.com</a></p><address>Smallfire Lab, 9783 E 116th Street #A472, Fishers, IN 46037-2822</address></div><nav class="sf-links" aria-label="Footer"><a href="/about/">About</a><a href="/about/#contact">Contact</a><a href="/tools/">Free tools</a><a href="/log/">Build log</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/security/">Security</a></nav></div></footer><!--/sf:footer-->
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ed26d9e1fe1448190182276063bccff"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
