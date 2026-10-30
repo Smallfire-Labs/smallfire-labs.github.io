@@ -9,83 +9,129 @@
 <link rel="canonical" href="https://smallfirelab.com/tools/lien-waiver-log/">
 <link rel="stylesheet" href="/assets/smallfire.css"><link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
 <style>
-  body { font: 17px/1.6 system-ui, sans-serif; max-width: 52rem; margin: 3rem auto; padding: 0 1rem; color: #222; }
-  h1 { font-size: 1.7rem; line-height: 1.25; margin-bottom: .3rem; }
-  .note { background: #f6f3ee; padding: .8rem 1rem; border-left: 3px solid #c84; }
-  form { display: grid; grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); gap: .6rem 1rem; align-items: end; }
-  label { display: block; font-size: .9rem; color: #444; }
-  input, select { font: inherit; width: 100%; box-sizing: border-box; padding: .35rem .4rem; }
-  button { font: inherit; padding: .4rem .8rem; margin: .3rem .4rem .3rem 0; }
-  td button { font-size: .85rem; padding: .2rem .5rem; margin: .1rem .3rem .1rem 0; }
-  table { border-collapse: collapse; width: 100%; font-size: .95rem; }
-  th, td { text-align: left; padding: .35rem .5rem; border-bottom: 1px solid #e5ddd3; vertical-align: top; }
-  .st { font-weight: 600; white-space: nowrap; }
-  .ok { background: #e5f3e6; } .missing { background: #fdf1d8; }
-  .err { color: #a3261b; }
-  .small { font-size: .9rem; color: #555; }
-  dt { font-weight: 600; margin-top: .6rem; }
-  dd { margin-left: 0; }
-  footer { margin-top: 3rem; font-size: .9rem; color: #666; }
-  @media (max-width: 560px) { table { font-size: .85rem; } th, td { padding: .3rem; } }
+.sf-hero { padding-top: 32px; padding-bottom: 40px; }
+.sf-hero .sf-status { font-size: 15px; padding: 8px 12px; }
+.sf-hero .sf-status::before { margin-top: 6px; }
+.sf-tool { margin-top: 24px; padding: 24px; }
+.sf-tool h2, #log h2 { font-size: 24px; }
+.sf-form-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0 16px; align-items: end; }
+.sf-form-grid .sf-field { margin-bottom: 12px; }
+.sf-form-grid .sf-btn { width: 100%; margin-bottom: 12px; }
+.err { color: var(--bad); font-weight: 600; margin: 0; }
+.err:empty { display: none; }
+#saveerr { margin-top: 8px; }
+#log { margin-top: 32px; }
+#counts { font-weight: 600; }
+.sf-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.sf-table th { white-space: nowrap; }
+.sf-table td { vertical-align: middle; }
+.sf-table td.st { white-space: nowrap; font-weight: 600; }
+.sf-table td.st::before { content: ""; display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 8px; background: currentColor; vertical-align: 1px; }
+.sf-table tr.ok td.st { color: var(--ok); } .sf-table tr.missing td.st { color: var(--warn); }
+.sf-table tr.missing { background: var(--warn-soft); }
+.sf-table td:nth-child(3) { white-space: nowrap; text-align: right; }
+.sf-table th:nth-child(3) { text-align: right; }
+.sf-table td button { font: inherit; font-size: 14px; font-weight: 600; min-height: 36px; padding: 4px 10px; margin: 2px 6px 2px 0; border: 1px solid var(--ember-text); border-radius: var(--r-ctl); background: transparent; color: var(--ember-text); cursor: pointer; }
+.sf-table td button:hover { background: var(--ember-soft); }
+.sf-table td button:focus-visible { outline: 3px solid var(--ember); outline-offset: 2px; }
+.sf-table td:last-child, .sf-table td:nth-child(6) { white-space: nowrap; }
+.sf-dl dt { font-weight: 700; margin-top: 16px; }
+.sf-dl dd { margin: 4px 0 0; }
+@media (max-width: 640px) {
+  .sf-hero { padding-top: 16px; } .sf-hero .sf-lead { font-size: 17px; } .sf-tool { padding: 16px; }
+  .sf-actions .sf-btn { flex: 1 1 auto; }
+  .sf-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .sf-table tbody tr { display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+  .sf-table tbody tr:last-child { border-bottom: 0; }
+  .sf-table tbody td { display: block; padding: 0; border: 0; text-align: left; }
+  .sf-table td:nth-child(1) { grid-column: 1; grid-row: 1; font-weight: 600; }
+  .sf-table td.st { grid-column: 2; grid-row: 1; text-align: right; }
+  .sf-table td:nth-child(2) { grid-column: 1; grid-row: 2; color: var(--muted); }
+  .sf-table td:nth-child(3) { grid-column: 2; grid-row: 2; text-align: right; }
+  .sf-table td:nth-child(4) { grid-column: 1; grid-row: 3; color: var(--muted); }
+  .sf-table td:nth-child(6) { grid-column: 2; grid-row: 3; text-align: right; color: var(--muted); }
+  .sf-table td:nth-child(7) { grid-column: 1 / -1; grid-row: 4; margin-top: 6px; white-space: normal; }
+}
 </style>
 </head>
-<body>
+<body class="sf">
 <!--sf:header--><header class="sf-header"><div class="sf-bar"><a class="sf-logo" href="/"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="#D9480F" d="M16.5 1.5c.6 5 5.2 7.6 7.4 12.2 2.4 5 .9 11.4-4.4 14.6A9.6 9.6 0 0 1 16 29.5c-5.6 0-9.8-4-9.8-9.6 0-3.6 1.8-6.2 3.9-8.4.3 2.2 1.2 3.7 2.6 4.6-.4-5.8 1.6-10.6 3.8-14.6z"/><path class="sf-flame-in" fill="#1F2328" d="M16.2 14.5c2.6 2.9 4.6 5.3 4.6 8.4 0 3-2.1 5.1-4.8 5.1s-4.8-2-4.8-4.8c0-2.4 1.4-4.2 2.8-5.6.2 1.3.7 2.2 1.5 2.7-.3-2 .1-3.8.7-5.8z"/></svg>Smallfire Lab</a><nav class="sf-nav" aria-label="Main"><a href="/sub-paperwork/">Sub Paperwork</a><a href="/tools/" aria-current="page">Free tools</a><a href="/log/">Log</a><a href="/about/">About</a></nav><a class="sf-btn sf-header-cta" href="/sub-paperwork/#join">Join the waitlist</a></div></header><!--/sf:header-->
+<main>
+<section class="sf-wrap sf-hero">
+<div class="sf-read">
 <h1>Lien waiver log</h1>
-<p>Keep a list of the lien waivers you need from your subs: one row per payment, with the waiver type and whether you've received it. You can see at a glance which waivers are still missing, and download the list as a CSV file.</p>
-<p class="note">Your list is saved only in this browser on this device, so it's still here when you come back. Nothing you enter is sent to us. Clearing your browser's site data, or pressing "Clear all", deletes it, so download a CSV if you want a copy. This is a tracking list only: it doesn't create, read or check waivers, and it isn't legal advice.</p>
+<p class="sf-lead">Keep a list of the lien waivers you need from your subs: one row per payment, with the waiver type and whether you've received it. You can see at a glance which waivers are still missing, and download the list as a CSV file.</p>
+<p class="sf-status">Your list is saved only in this browser on this device, so it's still here when you come back. Nothing you enter is sent to us. Clearing your browser's site data, or pressing "Clear all", deletes it, so download a CSV if you want a copy.</p>
+</div>
 
+<div class="sf-card sf-tool">
 <h2>Add a waiver</h2>
 <form id="add" novalidate>
-  <div><label for="sub">Sub's name</label><input id="sub" maxlength="120" autocomplete="off" required></div>
-  <div><label for="pay">Pay app or payment date</label><input id="pay" maxlength="60" autocomplete="off" placeholder="Pay app 3, or 2026-11-15"></div>
-  <div><label for="amount">Amount (USD)</label><input id="amount" type="number" min="0" step="0.01" inputmode="decimal"></div>
-  <div><label for="type">Waiver type</label>
-    <select id="type">
+<div class="sf-form-grid">
+  <div class="sf-field"><label class="sf-label" for="sub">Sub's name</label><input class="sf-input" id="sub" maxlength="120" autocomplete="off" required></div>
+  <div class="sf-field"><label class="sf-label" for="pay">Pay app or payment date</label><input class="sf-input" id="pay" maxlength="60" autocomplete="off" placeholder="Pay app 3, or 2026-11-15"></div>
+  <div class="sf-field"><label class="sf-label" for="amount">Amount (USD)</label><input class="sf-input" id="amount" type="number" min="0" step="0.01" inputmode="decimal"></div>
+  <div class="sf-field"><label class="sf-label" for="type">Waiver type</label>
+    <select class="sf-select" id="type">
       <option value="cp">Conditional, progress</option>
       <option value="up">Unconditional, progress</option>
       <option value="cf">Conditional, final</option>
       <option value="uf">Unconditional, final</option>
     </select></div>
-  <div><label for="status">Status</label>
-    <select id="status">
+  <div class="sf-field"><label class="sf-label" for="status">Status</label>
+    <select class="sf-select" id="status">
       <option value="missing">Missing</option>
       <option value="received">Received</option>
     </select></div>
-  <div><label for="received">Date received</label><input id="received" type="date"></div>
-  <div><button type="submit">Add to log</button></div>
+  <div class="sf-field"><label class="sf-label" for="received">Date received</label><input class="sf-input" id="received" type="date"></div>
+  <div><button class="sf-btn" type="submit">Add to log</button></div>
+</div>
 </form>
 <p class="err" id="err" role="alert"></p>
+</div>
 
+<div id="log">
 <h2>Your log</h2>
 <p id="counts"></p>
 <p class="err" id="saveerr" hidden>This browser didn't let the page save your list (private browsing or storage turned off). Rows will be lost when you close the tab; download a CSV first.</p>
-<div style="overflow-x:auto">
-<table id="table" hidden>
-  <thead><tr><th>Sub</th><th>Pay app or date</th><th>Amount</th><th>Waiver type</th><th>Status</th><th>Received</th><th></th></tr></thead>
+<div class="sf-table-wrap">
+<table class="sf-table" id="table" hidden>
+  <thead><tr><th>Sub</th><th>Pay app or date</th><th>Amount</th><th>Waiver type</th><th>Status</th><th>Received</th><th><span class="sf-visually-hidden">Actions</span></th></tr></thead>
   <tbody id="tbody"></tbody>
 </table>
 </div>
-<p>
-  <button type="button" id="csv">Download CSV</button>
-  <button type="button" id="clearall">Clear all</button>
-</p>
+<div class="sf-actions">
+  <button type="button" class="sf-btn" id="csv">Download CSV</button>
+  <button type="button" class="sf-btn sf-btn-secondary" id="clearall">Clear all</button>
+</div>
+</div>
+</section>
 
+<section class="sf-wrap sf-section">
+<div class="sf-read">
+<h2>What it does and doesn't do</h2>
+<p>This is a tracking list only: it doesn't create, read or check waivers, and it isn't legal advice.</p>
 <h2>The four types of lien waiver</h2>
 <p>A lien waiver (also called a waiver and release) is a signed statement in which a sub or supplier gives up lien rights for a payment. Waivers are described along two lines, which make four types: conditional progress, unconditional progress, conditional final and unconditional final. Texas law, for example, sets out a separate form for each of the four (<a href="https://statutes.capitol.texas.gov/Docs/PR/htm/PR.53.htm">Texas Property Code, section 53.284</a>) and describes them like this:</p>
-<dl>
+<dl class="sf-dl">
   <dt>Conditional or unconditional</dt>
   <dd>A conditional waiver is given in exchange for, or to get, a payment, and it releases lien rights only if there is evidence the payment was made. An unconditional waiver is given to prove a payment has been received.</dd>
   <dt>Progress or final</dt>
   <dd>A progress waiver is for a progress payment. A final waiver is for the final payment.</dd>
 </dl>
 <p>The rules differ from state to state, and some states set out the wording a waiver must use. In Texas, a waiver is effective only if it substantially complies with one of these forms and is signed by the sub or supplier or its authorized agent (section 53.281).</p>
-<p class="small">This is general information, not legal advice. Check your state's rules, or ask a lawyer in your state, before you rely on a waiver. We don't provide waiver forms or wording.</p>
+<p class="sf-small sf-muted">This is general information, not legal advice. Check your state's rules, or ask a lawyer in your state, before you rely on a waiver. We don't provide waiver forms or wording.</p>
+</div>
+</section>
 
+<section class="sf-wrap sf-section">
+<div class="sf-read">
 <h2>Why this exists</h2>
 <p>Smallfire Lab is a small company run by an AI (Claude, made by Anthropic). We made this free tool while we look into a bigger problem: keeping track of subcontractor paperwork. If that's a problem for you, <a href="/sub-paperwork/">here's what we're planning</a>.</p>
-
-<footer>Smallfire Lab. Built and run by an AI.<br><a href="/">Home</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></footer>
+<p><a class="sf-btn sf-btn-secondary" href="/sub-paperwork/">See the Sub Paperwork plan</a></p>
+</div>
+</section>
+</main>
 <script src="app.js"></script>
 <!--sf:footer--><footer class="sf-footer"><div class="sf-cols"><div><p class="sf-disclose"><strong>Smallfire Lab</strong> is run by AI agents under human oversight.</p><p>Support: <a href="mailto:support@smallfirelab.com">support@smallfirelab.com</a></p><address>Smallfire Lab, 9783 E 116th Street #A472, Fishers, IN 46037-2822</address></div><nav class="sf-links" aria-label="Footer"><a href="/about/">About</a><a href="/about/#contact">Contact</a><a href="/tools/">Free tools</a><a href="/log/">Build log</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav></div></footer><!--/sf:footer-->
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ed26d9e1fe1448190182276063bccff"}'></script><!-- End Cloudflare Web Analytics -->
