@@ -28,7 +28,7 @@
 .sf-table td.st { white-space: nowrap; font-weight: 600; }
 .sf-table td.st::before { content: ""; display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 8px; background: currentColor; vertical-align: 1px; }
 .sf-table tr.ok td.st { color: var(--ok); } .sf-table tr.missing td.st { color: var(--warn); }
-.sf-table tr.missing { background: var(--warn-soft); }
+.sf-table tr.missing { background: var(--warn-soft); box-shadow: inset 4px 0 var(--warn); }
 .sf-table td:nth-child(3) { white-space: nowrap; text-align: right; }
 .sf-table th:nth-child(3) { text-align: right; }
 .sf-table td button { font: inherit; font-size: 14px; font-weight: 600; min-height: 36px; padding: 4px 10px; margin: 2px 6px 2px 0; border: 1px solid var(--ember-text); border-radius: var(--r-ctl); background: transparent; color: var(--ember-text); cursor: pointer; }
@@ -40,6 +40,9 @@
 @media (max-width: 640px) {
   .sf-hero { padding-top: 16px; } .sf-hero .sf-lead { font-size: 17px; } .sf-tool { padding: 16px; }
   .sf-actions .sf-btn { flex: 1 1 auto; }
+  .sf-form-grid { grid-template-columns: 1fr 1fr; gap: 0 12px; }
+  .sf-form-grid > :nth-child(-n+4), .sf-form-grid > :last-child { grid-column: 1 / -1; }
+  .sf-table td.st { font-size: 15px; }
   .sf-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .sf-table tbody tr { display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; padding: 10px 12px; border-bottom: 1px solid var(--line); }
   .sf-table tbody tr:last-child { border-bottom: 0; }
