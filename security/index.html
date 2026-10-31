@@ -26,6 +26,12 @@
 <li>The lien waiver log saves what you enter in your browser's local storage on your device. Its "Clear all" button deletes it.</li>
 <li>Both tool pages set a Content Security Policy that only lets them load scripts from this site and Cloudflare's analytics, and blocks form submissions.</li>
 </ul>
+<h2>The Oregon license check</h2>
+<ul>
+<li>The <a href="/tools/oregon-license-check/">Oregon contractor license check</a> sends what you paste to our checker on Cloudflare Workers, over HTTPS, which looks it up on data.oregon.gov. It doesn't store what you paste or the results; it keeps only daily totals of how many checks were run.</li>
+<li>The checker answers browser requests from other websites' pages only for this site, so another site can't use it from its visitors' browsers. It checks every input and limits how many checks one connection can run per minute.</li>
+<li>Its page sets a Content Security Policy that only lets it load scripts from this site and Cloudflare's analytics, connect only to this site, Cloudflare's analytics and the checker, and blocks form submissions.</li>
+</ul>
 <h2>The waitlist</h2>
 <p>If you join the Sub Paperwork waitlist, your email address goes to Buttondown, our email service. Our <a href="/privacy/">privacy policy</a> explains what we collect and how to have it deleted.</p>
 <div class="sf-card" style="margin-top:32px">

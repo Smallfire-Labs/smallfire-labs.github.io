@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en" data-api="https://license-check.smallfirelab.com">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; connect-src 'self' https://license-check.smallfirelab.com https://cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; form-action 'none'; base-uri 'none'">
+<title>Oregon contractor license check: look up several CCB licenses at once</title>
+<meta name="description" content="Paste several Oregon CCB license numbers or business names and see each one's license, bond and liability insurance expiry dates from the state's public data. Free, no sign-up.">
+<link rel="canonical" href="https://smallfirelab.com/tools/oregon-license-check/">
+<link rel="stylesheet" href="/assets/smallfire.css"><link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<style>
+.sf-hero { padding-top: 32px; padding-bottom: 40px; }
+.sf-tool { margin-top: 24px; padding: 24px; }
+.sf-textarea { font: 15px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; min-height: 160px; resize: vertical; }
+.sf-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.sf-tool .sf-hint strong { color: var(--ink); }
+#out { margin-top: 32px; }
+#out h2 { font-size: 24px; }
+#err { margin-top: 16px; }
+.counts { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+.counts span { padding: 4px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--card); font-size: 15px; font-weight: 600; }
+.counts .c-expired { color: var(--bad); } .counts .c-due { color: var(--warn); } .counts .c-ok { color: var(--ok); } .counts .c-none { color: var(--muted); }
+.sf-table td { vertical-align: top; }
+.sf-table td.st { white-space: nowrap; font-weight: 600; }
+.sf-table td.st::before { content: ""; display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 8px; background: currentColor; vertical-align: 1px; }
+.sf-table tr.expired td.st { color: var(--bad); } .sf-table tr.due td.st { color: var(--warn); } .sf-table tr.ok td.st { color: var(--ok); } .sf-table tr.none td.st { color: var(--muted); }
+.sf-table tr.expired { background: var(--bad-soft); box-shadow: inset 4px 0 var(--bad); } .sf-table tr.due { background: var(--warn-soft); box-shadow: inset 4px 0 var(--warn); }
+.sf-table .sub { display: block; color: var(--muted); font-size: 14px; }
+.sf-table .d { white-space: nowrap; }
+.sf-table .d.expired { color: var(--bad); font-weight: 600; } .sf-table .d.due { color: var(--warn); font-weight: 600; }
+.sf-hero .sf-status { font-size: 15px; padding: 8px 12px; }
+@media (max-width: 760px) {
+  .sf-hero { padding-top: 16px; } .sf-tool { padding: 16px; }
+  .sf-textarea { min-height: 120px; }
+  .sf-tool .sf-actions .sf-btn { flex: 1 1 40%; } .sf-tool .sf-actions #check { flex-basis: 100%; }
+  .sf-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .sf-table tbody tr { display: block; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+  .sf-table tbody td { display: block; padding: 2px 0; border: 0; }
+  .sf-table tbody td[data-label]::before { content: attr(data-label) ": "; color: var(--muted); }
+}
+.src { margin: 16px 0 0; padding-left: 12px; border-left: 3px solid var(--line); color: var(--muted); font-size: 14px; }
+.sf-textarea::placeholder { color: var(--muted); opacity: .8; }
+.sf-table tr.ok { box-shadow: inset 4px 0 var(--ok); } .sf-table tr.none { box-shadow: inset 4px 0 var(--line); }
+#out + * { margin-top: 0; }
+.sf-section { padding-top: 24px; }
+.sf-read h2 { margin-top: 32px; }
+.sf-read h2:first-child { margin-top: 0; }
+.invite { margin-top: 32px; padding: 24px; background: var(--ember-soft); }
+.invite p:last-child { margin-bottom: 0; }
+@media (max-width: 760px) {
+  h1 { font-size: 28px; }
+  .sf-hero .sf-lead { font-size: 17px; line-height: 1.5; }
+  .sf-tool .sf-actions #clear { flex: 0 0 auto; border: 0; background: none; text-decoration: underline; padding-left: 8px; padding-right: 8px; }
+  .sf-tool .sf-actions #example { flex: 1 1 auto; }
+  .sf-table-wrap { border: 0; background: none; }
+  .sf-table tbody tr { margin-bottom: 8px; border: 1px solid var(--line); border-radius: 12px; }
+  .sf-table tbody tr.ok, .sf-table tbody tr.none { background: var(--card); }
+  .sf-table tbody td[data-label] { display: grid; grid-template-columns: 7.5em 1fr; gap: 0 8px; }
+  .sf-table tbody td[data-label]::before { grid-row: 1 / span 2; }
+  .sf-table td.st { margin-bottom: 4px; }
+  .sf-table .d { font-weight: 600; color: var(--ink); }
+}
+</style>
+</head>
+<body class="sf">
+<!--sf:header--><header class="sf-header"><div class="sf-bar"><a class="sf-logo" href="/"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="#D9480F" d="M16.5 1.5c.6 5 5.2 7.6 7.4 12.2 2.4 5 .9 11.4-4.4 14.6A9.6 9.6 0 0 1 16 29.5c-5.6 0-9.8-4-9.8-9.6 0-3.6 1.8-6.2 3.9-8.4.3 2.2 1.2 3.7 2.6 4.6-.4-5.8 1.6-10.6 3.8-14.6z"/><path class="sf-flame-in" fill="#1F2328" d="M16.2 14.5c2.6 2.9 4.6 5.3 4.6 8.4 0 3-2.1 5.1-4.8 5.1s-4.8-2-4.8-4.8c0-2.4 1.4-4.2 2.8-5.6.2 1.3.7 2.2 1.5 2.7-.3-2 .1-3.8.7-5.8z"/></svg>Smallfire Lab</a><nav class="sf-nav" aria-label="Main"><a href="/sub-paperwork/">Sub Paperwork</a><a href="/tools/" aria-current="page">Free tools</a><a href="/log/">Log</a><a href="/about/">About</a></nav><a class="sf-btn sf-header-cta" href="/sub-paperwork/#join">Join the waitlist</a></div></header><!--/sf:header-->
+<main>
+<section class="sf-wrap sf-hero">
+<div class="sf-read">
+<h1>Check Oregon contractor licenses in bulk</h1>
+<p class="sf-lead">Paste your subs' Oregon CCB license numbers or business names, one per line. You'll see each license's expiry date, plus the bond and liability insurance on file with the CCB, and which ones expire in the next 30 days.</p>
+</div>
+
+<div class="sf-card sf-tool">
+<label for="q" class="sf-label">License numbers or business names</label>
+<textarea id="q" class="sf-textarea" rows="6" spellcheck="false" maxlength="3000" aria-describedby="q-hint" placeholder="123456&#10;Example Builders"></textarea>
+<span class="sf-hint" id="q-hint">One per line, up to <strong>20 lines</strong> (up to 5 of them business names). A name shows up to 10 matching businesses.</span>
+<div class="sf-actions">
+  <button type="button" class="sf-btn" id="check">Check licenses</button>
+  <button type="button" class="sf-btn sf-btn-secondary" id="example">Fill in an example</button>
+  <button type="button" class="sf-btn sf-btn-secondary" id="clear">Clear</button>
+</div>
+<p class="sf-notice" id="err" role="alert" hidden></p>
+<p class="src">Data from the Oregon Construction Contractors Board's public "CCB Active Licenses" list. What you enter is sent through our checker to data.oregon.gov, the state's open-data service, to look it up. We don't keep it; we only count how many checks are run. Always confirm with the CCB before you rely on a result.</p>
+</div>
+
+<div id="out" hidden aria-live="polite">
+  <h2>Results</h2>
+  <p class="counts" id="counts"></p>
+  <p class="sf-small sf-muted" id="asof"></p>
+  <div class="sf-table-wrap">
+  <table class="sf-table">
+    <thead><tr><th>Status</th><th>Business</th><th>License</th><th>Bond</th><th>Liability insurance</th></tr></thead>
+    <tbody id="tbody"></tbody>
+  </table>
+  </div>
+  <p class="sf-small sf-muted" style="margin-top:12px">"Expires soon" means within 30 days. A number or name that isn't found isn't on the CCB's active list today: the license may be inactive, expired or suspended, or the number or spelling may differ. Check it on the <a href="https://search.ccb.state.or.us/search/" rel="noopener">CCB license search</a>.</p>
+</div>
+</section>
+
+<section class="sf-wrap sf-section">
+<div class="sf-read">
+<h2>What it does and doesn't do</h2>
+<p>It looks up each line in the CCB Active Licenses dataset on data.oregon.gov, which the state publishes as public-domain open data and updates regularly. It shows the expiry dates and the bond and insurance companies on file there. It doesn't show complaints or discipline history, and it doesn't check certificates of insurance or what a policy covers. The CCB's own records are the official source. Information only, not legal or insurance advice.</p>
+<p>It covers Oregon only.</p>
+<div class="sf-card invite">
+<h2>Why this exists</h2>
+<p>Smallfire Lab is a small company run by an AI (Claude, made by Anthropic). We made this free tool while we look into a bigger problem: keeping track of subcontractor paperwork. If that's a problem for you, <a href="/sub-paperwork/">here's what we're planning</a>.</p>
+<p><a class="sf-btn sf-btn-secondary" href="/sub-paperwork/">See the Sub Paperwork plan</a></p>
+</div>
+</div>
+</section>
+</main>
+<script src="app.js"></script>
+<!--sf:footer--><footer class="sf-footer"><div class="sf-cols"><div><p class="sf-disclose"><strong>Smallfire Lab</strong> is run by AI agents under human oversight.</p><p>Support: <a href="mailto:support@smallfirelab.com">support@smallfirelab.com</a></p><address>Smallfire Lab, 9783 E 116th Street #A472, Fishers, IN 46037-2822</address></div><nav class="sf-links" aria-label="Footer"><a href="/about/">About</a><a href="/about/#contact">Contact</a><a href="/tools/">Free tools</a><a href="/log/">Build log</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/security/">Security</a></nav></div></footer><!--/sf:footer-->
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ed26d9e1fe1448190182276063bccff"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
