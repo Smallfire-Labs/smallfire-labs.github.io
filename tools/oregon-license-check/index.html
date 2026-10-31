@@ -25,7 +25,8 @@
 .sf-table td.st::before { content: ""; display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 8px; background: currentColor; vertical-align: 1px; }
 .sf-table tr.expired td.st { color: var(--bad); } .sf-table tr.due td.st { color: var(--warn); } .sf-table tr.ok td.st { color: var(--ok); } .sf-table tr.none td.st { color: var(--muted); }
 .sf-table tr.expired { background: var(--bad-soft); box-shadow: inset 4px 0 var(--bad); } .sf-table tr.due { background: var(--warn-soft); box-shadow: inset 4px 0 var(--warn); }
-.sf-table .sub { display: block; color: var(--muted); font-size: 14px; }
+.sf-table tr:not(.none) td:nth-child(2) { font-weight: 600; }
+.sf-table .sub { font-weight: 400; display: block; color: var(--muted); font-size: 14px; }
 .sf-table .d { white-space: nowrap; }
 .sf-table .d.expired { color: var(--bad); font-weight: 600; } .sf-table .d.due { color: var(--warn); font-weight: 600; }
 .sf-hero .sf-status { font-size: 15px; padding: 8px 12px; }
@@ -38,7 +39,7 @@
   .sf-table tbody td { display: block; padding: 2px 0; border: 0; }
   .sf-table tbody td[data-label]::before { content: attr(data-label) ": "; color: var(--muted); }
 }
-.src { margin: 16px 0 0; padding-left: 12px; border-left: 3px solid var(--line); color: var(--muted); font-size: 14px; }
+.src { margin: 20px 0 0; padding-left: 12px; border-left: 3px solid var(--line); color: var(--muted); font-size: 14px; }
 .sf-textarea::placeholder { color: var(--muted); opacity: .8; }
 .sf-table tr.ok { box-shadow: inset 4px 0 var(--ok); } .sf-table tr.none { box-shadow: inset 4px 0 var(--line); }
 #out + * { margin-top: 0; }

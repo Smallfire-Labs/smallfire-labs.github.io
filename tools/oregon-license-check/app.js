@@ -71,7 +71,7 @@
       tr.appendChild(name);
       tr.appendChild(dateCell('License', r.license));
       tr.appendChild(dateCell('Bond', r.bond, r.bond.company, r.bond.amount));
-      tr.appendChild(dateCell('Liability insurance', r.insurance, r.insurance.company, r.insurance.amount));
+      tr.appendChild(dateCell('Insurance', r.insurance, r.insurance.company, r.insurance.amount));
       tbody.appendChild(tr);
     });
     var c = $('counts');
