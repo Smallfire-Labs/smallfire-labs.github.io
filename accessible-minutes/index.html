@@ -11,6 +11,7 @@
 .mm-report ul{list-style:none;padding:0;margin:0 0 12px;font-size:15px}
 .mm-report li{padding:6px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:4px 12px;flex-wrap:wrap}
 .mm-price{font-size:32px;font-weight:700;margin:0}
+.mm-packs{display:flex;flex-wrap:wrap;gap:12px}.mm-packs .sf-btn{white-space:nowrap}@media (max-width:480px){.mm-packs .sf-btn{flex:1 1 100%;text-align:center}}
 .sf-faq summary{min-height:44px;align-items:center}
 .mm-report-h{font-weight:700;margin:0 0 8px}
 .sf-card ul{padding-left:20px;margin:0}
@@ -28,7 +29,7 @@
 <p class="sf-lead">We don't write or rewrite your minutes. Send links to the minutes and agendas you post. We rebuild each file's structure, not its words, so it passes a PDF/UA-1 machine check. A report lists every word we removed or added, such as a page number.</p>
 <p><a class="sf-btn" href="mailto:support@smallfirelab.com?subject=Accessible%20minutes%20quote&amp;body=Links%20to%20the%20PDFs%2C%20one%20per%20line%3A%0A">Email us your links for a quote</a></p>
 <p class="sf-small">Or write to <strong>support@smallfirelab.com</strong> with your links, one per line.</p>
-<p class="sf-status"><span><strong>Checkout is open for organizations in the United States.</strong> Email us your links first: we quote, then email you a payment link for the pack that fits. Your first file (up to 10 pages) is still free, so you can check our work.</span></p>
+<p class="sf-status"><span><strong>Checkout is open for organizations in the United States.</strong> Not sure how many pages? Email us your links for a quote first. If you know, you can <a href="#price">buy a pack</a> now. Your first file (up to 10 pages) is still free: ask for it in your quote email, so you can check our work before you buy.</span></p>
 </div>
 <figure class="sf-figure">
 <div class="sf-card mm-report" aria-label="Example report">
@@ -84,9 +85,9 @@
 </section>
 
 <section class="sf-wrap sf-section"><div class="sf-read">
-<h2>Price</h2>
-<div class="sf-card" style="margin-bottom:16px"><p class="mm-price">$3 a page</p><p>Counted from your original file. <strong>10-page minimum per order</strong> ($30). Packs are paid before we start. Pages you don't use, including any file we can't do, are refunded on request at $3 a page, within 12 months of paying.</p></div>
-<p>Payment is by card or US bank account (ACH) on a Stripe checkout page. After we've quoted your files, we email you the payment link for the pack that fits: $30 for up to 10 pages or $75 for up to 25 pages, one-time, nothing renews. For now we can take payment only from organizations in the United States, so we send payment links only to them.</p>
+<h2 id="price">Price</h2>
+<div class="sf-card" style="margin-bottom:16px"><p class="mm-price">$3 a page</p><p>Counted from your original file. <strong>10-page minimum per order</strong> ($30). Packs are paid before we start. Pages you don't use, including any file we can't do, are refunded on request at $3 a page, within 12 months of paying.</p><p>Not sure how many pages? <a href="mailto:support@smallfirelab.com?subject=Accessible%20minutes%20quote&amp;body=Links%20to%20the%20PDFs%2C%20one%20per%20line%3A%0A">Email us your links for a quote first</a>.</p><p><strong>For organizations in the United States only.</strong></p><p class="mm-packs"><a class="sf-btn" href="https://pay.smallfirelab.com/order/minutes-10/">Buy a 10-page pack, $30</a> <a class="sf-btn" href="https://pay.smallfirelab.com/order/minutes-25/">Buy a 25-page pack, $75</a></p><p class="sf-small">After you pay, email support@smallfirelab.com from the address you paid with. Put your order number in the subject and the links to your PDFs, one per line.</p></div>
+<p>Payment is by card or US bank account (ACH) on a Stripe checkout page. Packs are a one-time payment; nothing renews.</p>
 <h2>What's in each report</h2>
 <p>The source link, both files' fingerprints (sha256), page counts, the veraPDF PDF/UA-1 result for your original and for our file, word counts, every word and running header we removed or added, images and links in and out, and any date, time, money amount or number that differs. It ends with what we didn't check.</p>
 <h2>How long it takes</h2>
